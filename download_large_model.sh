@@ -5,7 +5,7 @@
 set -e
 
 # ===== ここを編集 =====
-MODEL_NAME="your-model-name"
+MODEL_NAME="your-model-name" ## ここはunslothのモデルは指定しない
 # 例:
 # MODEL_NAME="Llama-3.2-3B-bnb-4bit"
 # =====================
