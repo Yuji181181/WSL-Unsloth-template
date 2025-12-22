@@ -65,7 +65,6 @@ cd <WSL-Unsloth-template>
 ### 2. 初期セットアップ
 
 ```bash
-# セットアップスクリプトを実行
 ./setup.sh
 ```
 
@@ -81,14 +80,14 @@ cd <WSL-Unsloth-template>
 ### 4. モデルダウンロード
 
 ```bash
-./download_model.sh
+./download_large_model.sh
 ```
 
 ### 5. 設定をカスタマイズ
 
 ```
-├── config.py                    # トレーニング設定
-├── data_formatter.py            # データセット整形
+├── config.py                   # トレーニング設定
+├── dataset_formatter.py        # データセット整形
 ├── fine_tuning.py              # PEFT
 ├── generate.py                 # 推論用スクリプト
 ```
@@ -96,20 +95,20 @@ cd <WSL-Unsloth-template>
 ### 6. トレーニング実行
 
 ```bash
-# 仮想環境をアクティベート
 source .venv/bin/activate
+```
 
-# トレーニング開始
+```bash
 uv run fine_tuning.py
 ```
 
 ## ファイル構成
 
 ```
-├── setup.sh                     # 初期セットアップスクリプト
-├── download_large_model.sh      # モデルダウンロードスクリプト
-├── config.py                    # トレーニング設定
-├── data_formatter.py            # データセット整形
+├── setup.sh                    # 初期セットアップスクリプト
+├── download_large_model.sh     # モデルダウンロードスクリプト
+├── config.py                   # トレーニング設定
+├── dataset_formatter.py        # データセット整形
 ├── fine_tuning.py              # PEFT
 ├── generate.py                 # 推論用スクリプト
 ├── pyproject.toml              # 依存関係定義
