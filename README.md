@@ -1,6 +1,7 @@
 # WSL-Unsloth-template
 
-WSL2環境でUnslothを使ったPEFT用のテンプレート
+WSL環境でUnslothを使ったファインチューニング用のテンプレート
+
 
 ## 前提条件
 
