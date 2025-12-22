@@ -65,9 +65,12 @@ echo "📥 小さなファイルを先にダウンロード..."
 for file in "${FILES[@]}"; do
     if [ "$file" != "model.safetensors" ]; then
         echo "  - $file"
-        aria2c -x 4 -s 4 -k 1M -c --auto-file-renaming=false \
+        # ファイルが存在しない場合はスキップ（エラーでも継続）
+        if ! aria2c -x 4 -s 4 -k 1M -c --auto-file-renaming=false \
             --allow-overwrite=true \
-            "${BASE_URL}/${file}" -o "$file" 2>/dev/null || wget -q "${BASE_URL}/${file}" -O "$file"
+            "${BASE_URL}/${file}" -o "$file" 2>&1; then
+            echo "    ⚠️  スキップ ($file はダウンロードできませんでした)"
+        fi
     fi
 done
 
