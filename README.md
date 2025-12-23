@@ -1,6 +1,6 @@
 # WSL-Unsloth-template
 
-WSL環境でUnslothを使ったファインチューニング用のテンプレート
+WSL環境でUnslothを使ったファインチューニングをするとき用のテンプレート
 
 
 ## 前提条件
