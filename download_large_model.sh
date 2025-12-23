@@ -5,13 +5,13 @@
 set -e
 
 # ===== ここを編集 =====
-MODEL_NAME="your-model-name" ## ここはunslothのモデルは指定しない
+MODEL_NAME="your-model-name" ## ここはunsloth/をつけない
 # 例:
 # MODEL_NAME="Llama-3.2-3B-bnb-4bit"
 # =====================
 
 CACHE_DIR="$HOME/.cache/huggingface/hub/models--unsloth--${MODEL_NAME}"
-BASE_URL="https://huggingface.co/unsloth/${MODEL_NAME}/resolve/main"
+BASE_URL="https://huggingface.co/unsloth/${MODEL_NAME}/resolve/main" ## Unslothのモデルを使用
 
 echo "🦥 ${MODEL_NAME} のダウンロードを開始します"
 echo "保存先: ${CACHE_DIR}"
