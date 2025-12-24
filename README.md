@@ -1,6 +1,8 @@
 # WSL-Unsloth-template
 
 WSL環境でUnslothを使ったファインチューニングをするとき用のテンプレート
+ローカル環境で10B程度のLLMのファインチューニングが可能
+モデルはUnslothのモデルを使用
 
 
 ## 前提条件
@@ -76,7 +78,7 @@ cd <WSL-Unsloth-template>
 
 ### 3. モデル名を編集
 
-- download_large_model.shの MODEL_NAME を編集
+download_large_model.shの MODEL_NAME を編集
 
 ### 4. モデルダウンロード
 
